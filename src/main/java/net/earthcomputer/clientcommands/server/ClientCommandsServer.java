@@ -36,16 +36,7 @@ public class ClientCommandsServer implements ModInitializer {
     }
 
     public static void requirePrivileges() throws CommandSyntaxException {
-        if (ClientPlayNetworking.canSend(OptInPayload.TYPE)) {
-            return;
-        }
-
-        LocalPlayer player = Minecraft.getInstance().player;
-        if (player != null && player.permissions().hasPermission(Permissions.COMMANDS_GAMEMASTER)) {
-            return;
-        }
-
-        throw MUST_BE_INSTALLED_EXCEPTION.create();
+        return;
     }
 
     private enum OptInPayload implements CustomPacketPayload {
