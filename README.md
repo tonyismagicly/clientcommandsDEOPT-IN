@@ -16,6 +16,23 @@ Patreon: https://www.patreon.com/earthcomputer
 1. Download clientcommands from the [releases page](https://github.com/Earthcomputer/clientcommands/releases) or from [Modrinth](https://modrinth.com/mod/client-commands)
    and move it to the mods folder (`.minecraft/mods`).
 
+## Building
+1. Clone the repository
+   ```
+   git clone https://github.com/tonyismagicly/clientcommandsDEOPT-IN
+   cd clientcommands
+   ```
+1. Generate the Minecraft source code
+   ```
+   ./gradlew genSources
+   ```
+   - Note: on Windows, use `gradlew` rather than `./gradlew`.
+1. Build the Mod with Java 25+
+   ```
+   ./gradlew build
+   ```
+1. Copy the mod from ./build/libs/ into your mod folder
+
 ## Contributing
 To contribute translations, see the [translation contribution guidelines](docs/TRANSLATING.md).
 
